@@ -13,7 +13,7 @@ CREATE TABLE "Contacts" (
 );
 
 CREATE TABLE "Category" (
-    "category_id" INT   NOT NULL,
+    "category_id" VARCHAR   NOT NULL,
     "category" VARCHAR   NOT NULL,
     CONSTRAINT "pk_Category" PRIMARY KEY (
         "category_id"
@@ -21,7 +21,7 @@ CREATE TABLE "Category" (
 );
 
 CREATE TABLE "Subcategory" (
-    "subcategory_id" INT   NOT NULL,
+    "subcategory_id" VARCHAR   NOT NULL,
     "subcategory" VARCHAR   NOT NULL,
     CONSTRAINT "pk_Subcategory" PRIMARY KEY (
         "subcategory_id"
@@ -39,12 +39,12 @@ CREATE TABLE "Campaign" (
     "backers_count" INT   NOT NULL,
     "country" VARCHAR   NOT NULL,
     "currency" VARCHAR   NOT NULL,
-    "launched_date" DATETIME   NOT NULL,
-    "end_date" DATETIME   NOT NULL,
+    "launched_date" DATE   NOT NULL,
+    "end_date" DATE   NOT NULL,
     "staff_pick" BOOLEAN   NOT NULL,
     "spotlight" BOOLEAN   NOT NULL,
-    "category_id" INT   NOT NULL,
-    "subcategory_id" INT   NOT NULL,
+    "category_id" VARCHAR   NOT NULL,
+    "subcategory_id" VARCHAR   NOT NULL,
     CONSTRAINT "pk_Campaign" PRIMARY KEY (
         "cf_id"
      )
